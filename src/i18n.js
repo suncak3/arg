@@ -14,6 +14,20 @@ const en = {
   home: {
     welcomeTitle: 'Industrial Equipment Solutions',
     welcomeText: 'ARG Trading and Co. is your reliable partner in supply and maintenance of high-quality industrial equipment. We offer comprehensive solutions for various industries and production needs.'
+  },
+  footer: {
+    catalog: 'Catalog',
+    products: 'Products',
+    services: 'Services',
+    brands: 'Brands',
+    forBuyers: 'For Buyers',
+    deliveryPayment: 'Delivery & Payment',
+    warranty: 'Product Warranty',
+    company: 'Company',
+    aboutCompany: 'About Us',
+    certificates: 'Certificates',
+    contacts: 'Our Contacts',
+    tagline: 'ARG is your most reliable partner!'
   }
   // Add more translation sections as needed
 };
@@ -31,6 +45,20 @@ const ru = {
   home: {
     welcomeTitle: 'Решения в области промышленного оборудования',
     welcomeText: 'ARG Trading and Co. - ваш надежный партнер в поставке и обслуживании высококачественного промышленного оборудования. Мы предлагаем комплексные решения для различных отраслей и производственных нужд.'
+  },
+  footer: {
+    catalog: 'Каталог',
+    products: 'Товары',
+    services: 'Услуги',
+    brands: 'Бренды',
+    forBuyers: 'Покупателям',
+    deliveryPayment: 'Доставка и оплата',
+    warranty: 'Гарантия на товар',
+    company: 'Компания',
+    aboutCompany: 'О компании',
+    certificates: 'Сертификаты',
+    contacts: 'Наши контакты',
+    tagline: 'ARG самый надежный партнер!'
   }
   // Add more translation sections as needed
 };

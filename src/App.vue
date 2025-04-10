@@ -9,12 +9,13 @@
         </transition>
       </router-view>
     </main>
-    <!-- Footer will be added later -->
+    <Footer />
   </div>
 </template>
 
 <script setup>
 import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
 </script>
 
 <style>
