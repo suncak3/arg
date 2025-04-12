@@ -335,6 +335,73 @@ const en = {
     
     title: 'Contact Us',
     comingSoon: 'Additional contact information will be available soon. Please check back later!'
+  },
+
+  catalog: {
+    pageTitle: 'Product Catalog',
+    pageSubtitle: 'Browse our comprehensive range of industrial equipment and components',
+    
+    categories: {
+      title: 'Product Categories',
+      belts: 'Belts',
+      beltsDescription: 'High-quality industrial belts designed for reliable power transmission in various applications.',
+      hoses: 'Hoses & Fittings',
+      hosesDescription: 'Durable industrial hoses and fittings designed to withstand high pressure and extreme temperatures.',
+      bearings: 'Bearings',
+      bearingsDescription: 'Precision-engineered bearings designed for smooth operation and long service life in demanding applications.',
+      tools: 'Tools',
+      toolsDescription: 'Professional-grade tools built for precision and durability in industrial environments.'
+    },
+    
+    brands: {
+      title: 'Our Brands',
+      filterTitle: 'Filter by Brand',
+      all: 'All Brands',
+      viewProducts: 'View Products',
+      
+      // Brand descriptions
+      gatesDescription: 'Global leader in power transmission and fluid power products with over 100 years of innovation.',
+      continentalDescription: "One of the world's largest manufacturers of technical rubber products and automotive components.",
+      optibeltDescription: 'German manufacturer of high-performance drive belts with excellent power transmission efficiency.',
+      dunhamDescription: 'Specializes in high-quality HVAC systems and components for industrial applications.',
+      csiDescription: 'Leading provider of precision measurement instruments and monitoring solutions.',
+      bioflexDescription: 'Innovative manufacturer of flexible hose solutions for demanding industrial environments.',
+      parkerDescription: 'Global leader in motion and control technologies, providing engineered solutions for industrial applications.',
+      statsDescription: 'UK-based supplier of specialized industrial components with focus on quality and reliability.',
+      knowsleyDescription: 'Expert in fluid transfer systems with comprehensive range of industrial hoses and fittings.',
+      kuriyamaDescription: 'Manufacturer of industrial rubber, plastic and composite hoses for various applications.',
+      fagDescription: 'Premium bearing manufacturer known for high precision and reliability in demanding conditions.',
+      skfDescription: 'World leader in bearing technology offering solutions for various industrial applications.',
+      nskDescription: 'Global manufacturer of rolling bearings, linear technology, and automotive components.',
+      nachiDescription: 'Japanese manufacturer of high-precision bearings and cutting tools for industrial applications.',
+      ntnDescription: 'Leading bearing manufacturer with innovative solutions for demanding industrial environments.',
+      inaDescription: 'Specializes in needle roller bearings and precision components for industrial applications.',
+      roebuckDescription: 'Provider of high-quality hand tools and industrial equipment with focus on durability.',
+      eclipseDescription: 'Manufacturer of precision measuring and cutting tools for professional applications.',
+      cutlineDescription: 'Specializes in advanced cutting tools and equipment for industrial manufacturing.',
+      mcmasterDescription: 'Supplier of industrial hardware, tools, and maintenance equipment for factories and businesses.',
+      genericDescription: 'Quality manufacturer providing reliable industrial components for your business needs.'
+    },
+    
+    products: {
+      title: 'Products',
+      code: 'Product Code',
+      brand: 'Brand',
+      specifications: 'Specifications',
+      description: 'Description',
+      viewDetails: 'View Details',
+      inquire: 'Request Quote',
+      addToInquiry: 'Add to Inquiry',
+      addedToInquiry: 'added to inquiry list'
+    },
+    
+    back: 'Back to Brands',
+    
+    cta: {
+      title: 'Need Industrial Equipment?',
+      text: 'Contact us today to discuss your industrial equipment needs and get professional consultation.',
+      button: 'Contact Us Now'
+    }
   }
 };
 
@@ -672,6 +739,73 @@ const ru = {
     
     title: 'Связаться с нами',
     comingSoon: 'Дополнительная контактная информация будет доступна в ближайшее время. Пожалуйста, проверьте позже!'
+  },
+
+  catalog: {
+    pageTitle: 'Каталог продукции',
+    pageSubtitle: 'Ознакомьтесь с нашим полным ассортиментом промышленного оборудования и комплектующих',
+    
+    categories: {
+      title: 'Категории продукции',
+      belts: 'Ремни',
+      beltsDescription: 'Высококачественные промышленные ремни, разработанные для надежной передачи энергии в различных приложениях.',
+      hoses: 'Шланги и фитинги',
+      hosesDescription: 'Прочные промышленные шланги и фитинги, предназначенные для работы под высоким давлением и при экстремальных температурах.',
+      bearings: 'Подшипники',
+      bearingsDescription: 'Высокоточные подшипники, разработанные для плавной работы и длительного срока службы в тяжелых условиях эксплуатации.',
+      tools: 'Инструменты',
+      toolsDescription: 'Профессиональные инструменты, созданные для обеспечения точности и долговечности в промышленных условиях.'
+    },
+    
+    brands: {
+      title: 'Наши бренды',
+      filterTitle: 'Фильтр по бренду',
+      all: 'Все бренды',
+      viewProducts: 'Посмотреть продукцию',
+      
+      // Brand descriptions
+      gatesDescription: 'Мировой лидер в области продуктов для передачи энергии и гидравлики с более чем 100-летним опытом инноваций.',
+      continentalDescription: 'Один из крупнейших в мире производителей технических резиновых изделий и автомобильных компонентов.',
+      optibeltDescription: 'Немецкий производитель высокоэффективных приводных ремней с превосходной эффективностью передачи энергии.',
+      dunhamDescription: 'Специализируется на высококачественных системах HVAC и компонентах для промышленных приложений.',
+      csiDescription: 'Ведущий поставщик прецизионных измерительных приборов и решений для мониторинга.',
+      bioflexDescription: 'Инновационный производитель гибких шланговых решений для требовательных промышленных сред.',
+      parkerDescription: 'Мировой лидер в технологиях движения и управления, предоставляющий инженерные решения для промышленных приложений.',
+      statsDescription: 'Британский поставщик специализированных промышленных компонентов с акцентом на качество и надежность.',
+      knowsleyDescription: 'Эксперт в системах передачи жидкостей с полным ассортиментом промышленных шлангов и фитингов.',
+      kuriyamaDescription: 'Производитель промышленных резиновых, пластиковых и композитных шлангов для различных применений.',
+      fagDescription: 'Премиальный производитель подшипников, известный высокой точностью и надежностью в сложных условиях.',
+      skfDescription: 'Мировой лидер в технологии подшипников, предлагающий решения для различных промышленных применений.',
+      nskDescription: 'Глобальный производитель роликовых подшипников, линейных технологий и автомобильных компонентов.',
+      nachiDescription: 'Японский производитель высокоточных подшипников и режущих инструментов для промышленных применений.',
+      ntnDescription: 'Ведущий производитель подшипников с инновационными решениями для требовательных промышленных сред.',
+      inaDescription: 'Специализируется на игольчатых роликовых подшипниках и прецизионных компонентах для промышленных применений.',
+      roebuckDescription: 'Поставщик высококачественных ручных инструментов и промышленного оборудования с акцентом на долговечность.',
+      eclipseDescription: 'Производитель прецизионных измерительных и режущих инструментов для профессиональных применений.',
+      cutlineDescription: 'Специализируется на передовых режущих инструментах и оборудовании для промышленного производства.',
+      mcmasterDescription: 'Поставщик промышленного оборудования, инструментов и оборудования для обслуживания фабрик и предприятий.',
+      genericDescription: 'Качественный производитель, предоставляющий надежные промышленные компоненты для вашего бизнеса.'
+    },
+    
+    products: {
+      title: 'Продукция',
+      code: 'Код товара',
+      brand: 'Бренд',
+      specifications: 'Характеристики',
+      description: 'Описание',
+      viewDetails: 'Детали',
+      inquire: 'Запросить цену',
+      addToInquiry: 'Добавить в запрос',
+      addedToInquiry: 'добавлен в список запросов'
+    },
+    
+    back: 'Назад к брендам',
+    
+    cta: {
+      title: 'Нужно промышленное оборудование?',
+      text: 'Свяжитесь с нами сегодня, чтобы обсудить ваши потребности в промышленном оборудовании и получить профессиональную консультацию.',
+      button: 'Связаться сейчас'
+    }
   }
 };
 

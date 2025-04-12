@@ -15,7 +15,7 @@
       </div>
     </section>
 
-    <!-- Products Section (Restored from your provided code) -->
+    <!-- Products Section - Updated with navigation to catalog with category -->
     <section class="products" ref="productsSection">
       <div class="container">
         <h2 class="section-title animated fade-in-up">{{ t('home.ourProducts') }}</h2>
@@ -28,6 +28,7 @@
             :key="index"
             :class="{ 'animated fade-in-up': true }"
             :style="{ 'animation-delay': `${0.1 + index * 0.1}s` }"
+            @click="navigateToCategory(product.categoryId)"
           >
             <div class="product-card__image">
               <img :src="product.image" :alt="product.title" loading="lazy">
@@ -73,7 +74,7 @@
       </div>
     </section>
 
-    <!-- Partners Section (Updated as requested) -->
+    <!-- Partners Section -->
     <section class="partners" ref="partnersSection">
       <div class="container">
         <h2 class="section-title animated fade-in-up">{{ t('home.partners') }}</h2>
@@ -114,8 +115,10 @@
 <script setup>
 import { computed, h, onMounted, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
+import { useRouter } from 'vue-router';
 
 const { t } = useI18n();
+const router = useRouter();
 
 // For intersection observer animations
 const productsSection = ref(null);
@@ -202,25 +205,37 @@ const SupportIcon = () =>
     [h('path', { d: 'M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z' })]
   );
 
-// Product data
+// Updated product data with categoryId
 const products = computed(() => [
   {
     title: t('home.products.tools'),
-    image: '/images/product_tools.svg'
+    image: '/images/product_tools.svg',
+    categoryId: 3  // Index of the tools category in the catalog
   },
   {
     title: t('home.products.belts'),
-    image: '/images/product_belts.svg'
+    image: '/images/product_belts.svg',
+    categoryId: 0  // Index of the belts category in the catalog
   },
   {
     title: t('home.products.hoses'),
-    image: '/images/product_hoses.svg'
+    image: '/images/product_hoses.svg',
+    categoryId: 1  // Index of the hoses category in the catalog
   },
   {
     title: t('home.products.bearings'),
-    image: '/images/product_bearings.svg'
+    image: '/images/product_bearings.svg',
+    categoryId: 2  // Index of the bearings category in the catalog
   }
 ]);
+
+// Function to navigate to catalog with selected category
+const navigateToCategory = (categoryId) => {
+  router.push({
+    path: '/catalog',
+    query: { category: categoryId }
+  });
+};
 
 // Advantages data
 const advantages = computed(() => [
@@ -362,6 +377,7 @@ section {
   transform: translateY(30px);
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
 
 .product-card::before {
@@ -827,5 +843,12 @@ section.visible .animated {
   max-width: 100%;
   max-height: 100%;
   filter: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 </style>
