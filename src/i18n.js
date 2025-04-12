@@ -84,6 +84,65 @@ const en = {
     comingSoon: 'Our product catalog will be available soon. Please check back later!'
   },
   about: {
+    heroTitle: 'About ARG Trading and Co.',
+    heroSubtitle: 'Your reliable partner in industrial equipment supply for over a decade',
+    
+    overview: {
+      title: 'Company Overview',
+      description: 'ARG Trading and Co. is a recognized leader in the supply of industrial equipment and components. Since our founding, we have built a reputation for reliability, quality, and outstanding service.<br><br>We specialize in providing a wide range of industrial equipment from leading global manufacturers. Our comprehensive inventory includes tools, belts, hoses, fittings, bearings, and more - everything needed to keep your production running efficiently.<br><br>Our team of experienced professionals is dedicated to helping you find the right solution for your specific needs, ensuring minimal downtime and maximum productivity.',
+      stats: {
+        years: 'Years of Experience',
+        clients: 'Satisfied Clients',
+        partners: 'Global Partners'
+      }
+    },
+    
+    mission: {
+      title: 'Our Mission & Values',
+      description: 'Our mission is to become the most reliable partner for industrial enterprises by providing high-quality equipment and components that ensure uninterrupted operation of production facilities.<br><br>We strive to establish long-term relationships with our clients based on mutual trust, timely delivery, and professional service.',
+      values: {
+        quality: {
+          title: 'Quality',
+          text: 'We offer only certified products from trusted manufacturers with full warranty support.'
+        },
+        reliability: {
+          title: 'Reliability',
+          text: 'Timely delivery and professional service are the foundation of our business approach.'
+        },
+        innovation: {
+          title: 'Innovation',
+          text: 'We continuously monitor market trends to offer the most advanced solutions.'
+        }
+      }
+    },
+    
+    team: {
+      title: 'Our Professional Team',
+      description: 'The strength of ARG Trading and Co. lies in our team of dedicated professionals with years of experience in the industrial equipment sector.',
+      positions: {
+        ceo: 'Chief Executive Officer',
+        salesDirector: 'Sales Director',
+        techDirector: 'Technical Director',
+        logisticsManager: 'Logistics Manager'
+      }
+    },
+    
+    certificates: {
+      title: 'Certificates & Quality Assurance',
+      description: 'We adhere to international quality standards and hold all necessary certifications for our business operations.',
+      items: {
+        iso9001: 'Quality Management System certification, ensuring consistent delivery of products and services that meet customer requirements.',
+        iso14001: 'Environmental Management System certification, demonstrating our commitment to minimizing environmental impact.',
+        ohsas18001: 'Occupational Health and Safety Management certification, ensuring safe and healthy workplace conditions.'
+      }
+    },
+    
+    cta: {
+      title: 'Ready to Collaborate?',
+      text: 'Contact our team today to discuss how we can help you find the perfect industrial equipment solutions for your business needs.',
+      button: 'Contact Us Now'
+    },
+    
     title: 'About Our Company',
     comingSoon: 'Information about our company will be available soon. Please check back later!'
   },
@@ -180,6 +239,65 @@ const ru = {
     comingSoon: 'Наш каталог товаров будет доступен в ближайшее время. Пожалуйста, проверьте позже!'
   },
   about: {
+    heroTitle: 'О компании ARG Trading and Co.',
+    heroSubtitle: 'Ваш надежный партнер в поставке промышленного оборудования более 10 лет',
+    
+    overview: {
+      title: 'О компании',
+      description: 'ARG Trading and Co. - признанный лидер в сфере поставок промышленного оборудования и комплектующих. С момента основания мы заработали репутацию надежного поставщика, гарантирующего высокое качество и превосходный сервис.<br><br>Мы специализируемся на поставке широкого ассортимента промышленного оборудования от ведущих мировых производителей. Наш ассортимент включает инструменты, ремни, шланги, фитинги, подшипники и многое другое - все, что необходимо для бесперебойной работы вашего производства.<br><br>Наша команда опытных профессионалов поможет вам найти правильное решение для ваших конкретных потребностей, обеспечивая минимальное время простоя и максимальную производительность.',
+      stats: {
+        years: 'Лет опыта',
+        clients: 'Довольных клиентов',
+        partners: 'Глобальных партнеров'
+      }
+    },
+    
+    mission: {
+      title: 'Наша миссия и ценности',
+      description: 'Наша миссия - стать самым надежным партнером для промышленных предприятий, поставляя высококачественное оборудование и комплектующие, обеспечивающие бесперебойную работу производственных мощностей.<br><br>Мы стремимся устанавливать долгосрочные отношения с нашими клиентами на основе взаимного доверия, своевременной доставки и профессионального обслуживания.',
+      values: {
+        quality: {
+          title: 'Качество',
+          text: 'Мы предлагаем только сертифицированную продукцию от проверенных производителей с полной гарантийной поддержкой.'
+        },
+        reliability: {
+          title: 'Надёжность',
+          text: 'Своевременная доставка и профессиональное обслуживание - основа нашего подхода к бизнесу.'
+        },
+        innovation: {
+          title: 'Инновации',
+          text: 'Мы постоянно следим за тенденциями рынка, чтобы предлагать самые передовые решения.'
+        }
+      }
+    },
+    
+    team: {
+      title: 'Наша профессиональная команда',
+      description: 'Сила ARG Trading and Co. заключается в нашей команде преданных своему делу профессионалов с многолетним опытом работы в секторе промышленного оборудования.',
+      positions: {
+        ceo: 'Генеральный директор',
+        salesDirector: 'Директор по продажам',
+        techDirector: 'Технический директор',
+        logisticsManager: 'Менеджер по логистике'
+      }
+    },
+    
+    certificates: {
+      title: 'Сертификаты и гарантия качества',
+      description: 'Мы придерживаемся международных стандартов качества и имеем все необходимые сертификаты для ведения нашей деятельности.',
+      items: {
+        iso9001: 'Сертификация системы менеджмента качества, обеспечивающая постоянную поставку продуктов и услуг, отвечающих требованиям клиентов.',
+        iso14001: 'Сертификация системы экологического менеджмента, демонстрирующая нашу приверженность минимизации воздействия на окружающую среду.',
+        ohsas18001: 'Сертификация системы менеджмента охраны здоровья и безопасности труда, обеспечивающая безопасные и здоровые условия работы.'
+      }
+    },
+    
+    cta: {
+      title: 'Готовы к сотрудничеству?',
+      text: 'Свяжитесь с нашей командой сегодня, чтобы обсудить, как мы можем помочь вам найти идеальные решения в области промышленного оборудования для ваших бизнес-потребностей.',
+      button: 'Связаться сейчас'
+    },
+    
     title: 'О нашей компании',
     comingSoon: 'Информация о нашей компании будет доступна в ближайшее время. Пожалуйста, проверьте позже!'
   },
