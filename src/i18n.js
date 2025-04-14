@@ -331,7 +331,7 @@ const en = {
       },
       address: {
         title: 'Address',
-        value: 'Astana, Yesil district, 33 Kunaeva St., office 313',
+        value: 'Astana, Syganak St. 60/2',
         getDirections: 'Get directions'
       },
       hours: {
@@ -371,7 +371,7 @@ const en = {
     
     officeLocation: {
       title: 'Our Main Office',
-      address: 'Astana, Yesil district, 33 Kunaeva St., office 313',
+      address: 'Astana, Syganak St. 60/2',
       directions: 'Located in the central business district, near Central Station.',
       hoursTitle: 'Working Hours',
       hours: 'Monday to Friday: 9:00 AM - 6:00 PM'
@@ -785,7 +785,7 @@ const ru = {
       },
       address: {
         title: 'Адрес',
-        value: 'г. Астана, район Есиль, ул. Кунаева 33, офис 313',
+        value: 'г.Астана, ул. Сыганак 60/2',
         getDirections: 'Проложить маршрут'
       },
       hours: {
@@ -825,7 +825,7 @@ const ru = {
     
     officeLocation: {
       title: 'Наш главный офис',
-      address: 'г. Астана, район Есиль, ул. Кунаева 33, офис 313',
+      address: 'г.Астана, ул. Сыганак 60/2',
       directions: 'Расположен в центральном деловом районе, рядом с Центральным вокзалом.',
       hoursTitle: 'Рабочие часы',
       hours: 'Понедельник - Пятница: 9:00 - 18:00'

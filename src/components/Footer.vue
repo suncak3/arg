@@ -40,13 +40,10 @@
                 <h3 class="footer__title">{{ t('footer.catalog') }}</h3>
                 <ul class="footer__list">
                   <li class="footer__item">
-                    <router-link to="/products" class="footer__link">{{ t('footer.products') }}</router-link>
+                    <span class="footer__link">{{ t('footer.products') }}</span>
                   </li>
                   <li class="footer__item">
-                    <router-link to="/services" class="footer__link">{{ t('footer.services') }}</router-link>
-                  </li>
-                  <li class="footer__item">
-                    <router-link to="/brands" class="footer__link">{{ t('footer.brands') }}</router-link>
+                    <span class="footer__link">{{ t('footer.brands') }}</span>
                   </li>
                 </ul>
               </div>
@@ -56,10 +53,10 @@
                 <h3 class="footer__title">{{ t('footer.forBuyers') }}</h3>
                 <ul class="footer__list">
                   <li class="footer__item">
-                    <router-link to="/delivery" class="footer__link">{{ t('footer.deliveryPayment') }}</router-link>
+                    <span class="footer__link">{{ t('footer.deliveryPayment') }}</span>
                   </li>
                   <li class="footer__item">
-                    <router-link to="/warranty" class="footer__link">{{ t('footer.warranty') }}</router-link>
+                    <span class="footer__link">{{ t('footer.warranty') }}</span>
                   </li>
                 </ul>
               </div>
@@ -69,10 +66,10 @@
                 <h3 class="footer__title">{{ t('footer.company') }}</h3>
                 <ul class="footer__list">
                   <li class="footer__item">
-                    <router-link to="/about" class="footer__link">{{ t('footer.aboutCompany') }}</router-link>
+                    <span class="footer__link">{{ t('footer.aboutCompany') }}</span>
                   </li>
                   <li class="footer__item">
-                    <router-link to="/certificates" class="footer__link">{{ t('footer.certificates') }}</router-link>
+                    <span class="footer__link">{{ t('footer.certificates') }}</span>
                   </li>
                 </ul>
               </div>
@@ -87,7 +84,7 @@
                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                       </svg>
                     </div>
-                    <a href="tel:+7 (708) 103 48 23" class="contact-link">+7 (708) 103 48 23</a>
+                    <span class="contact-link">+7 (708) 103 48 23</span>
                   </li>
                   <li class="footer__item contact-item">
                     <div class="contact-icon">
