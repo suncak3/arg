@@ -108,72 +108,188 @@
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services">
-    <div class="container">
-      <h2 class="section-title">{{ t('about.services.title') }}</h2>
-      <p class="section-description">{{ t('about.services.description') }}</p>
-
-      <div class="services-list">
-        <div
-          class="service-item"
-          v-for="(item, index) in serviceItems"
-          :key="index"
-        >
-          <div class="service-icon">
-            <ServiceIcon />
+    <!-- NEW SECTION: Services Section -->
+    <section class="services" ref="servicesSection">
+      <div class="container">
+        <h2 class="section-title animated fade-in-up">{{ t('about.services.title') }}</h2>
+        <p class="section-description animated fade-in-up delay-1">{{ t('about.services.description') }}</p>
+        
+        <div class="services-grid">
+          <div class="service-item animated fade-in-up" style="--i: 2;">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+              </svg>
+            </div>
+            <p class="service-text">{{ t('about.services.items.supplying') }}</p>
           </div>
-          <p class="service-text">{{ item }}</p>
+          
+          <div class="service-item animated fade-in-up" style="--i: 3;">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+              </svg>
+            </div>
+            <p class="service-text">{{ t('about.services.items.technical') }}</p>
+          </div>
+          
+          <div class="service-item animated fade-in-up" style="--i: 4;">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+            <p class="service-text">{{ t('about.services.items.search') }}</p>
+          </div>
+          
+          <div class="service-item animated fade-in-up" style="--i: 5;">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+              </svg>
+            </div>
+            <p class="service-text">{{ t('about.services.items.analogues') }}</p>
+          </div>
+          
+          <div class="service-item animated fade-in-up" style="--i: 6;">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+              </svg>
+            </div>
+            <p class="service-text">{{ t('about.services.items.logistics') }}</p>
+          </div>
+          
+          <div class="service-item animated fade-in-up" style="--i: 7;">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <p class="service-text">{{ t('about.services.items.tender') }}</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-    <!-- Industries Section -->
+    <!-- NEW SECTION: Industries Section -->
     <section class="industries" ref="industriesSection">
-  <div class="container">
-    <h2 class="section-title animated fade-in-up">{{ t('about.industries.title') }}</h2>
-    <p class="section-description animated fade-in-up delay-1">{{ t('about.industries.description') }}</p>
-    
-    <div class="industries-list">
-      <div class="industry-item" v-for="(item, index) in industryItems" :key="index">
-        <div class="service-icon">
-          <ServiceIcon />
+      <div class="container">
+        <h2 class="section-title animated fade-in-up">{{ t('about.industries.title') }}</h2>
+        <p class="section-description animated fade-in-up delay-1">{{ t('about.industries.description') }}</p>
+        
+        <div class="industries-grid">
+          <div class="industry-item animated fade-in-up" style="--i: 2;">
+            <div class="industry-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
+            </div>
+            <h3 class="industry-title">{{ t('about.industries.items.oil') }}</h3>
+          </div>
+          
+          <div class="industry-item animated fade-in-up" style="--i: 3;">
+            <div class="industry-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="industry-title">{{ t('about.industries.items.energy') }}</h3>
+          </div>
+          
+          <div class="industry-item animated fade-in-up" style="--i: 4;">
+            <div class="industry-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+            </div>
+            <h3 class="industry-title">{{ t('about.industries.items.chemical') }}</h3>
+          </div>
+          
+          <div class="industry-item animated fade-in-up" style="--i: 5;">
+            <div class="industry-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+              </svg>
+            </div>
+            <h3 class="industry-title">{{ t('about.industries.items.mining') }}</h3>
+          </div>
+          
+          <div class="industry-item animated fade-in-up" style="--i: 6;">
+            <div class="industry-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <h3 class="industry-title">{{ t('about.industries.items.construction') }}</h3>
+          </div>
         </div>
-        <p class="service-text">{{ item }}</p>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-
-    <!-- Partners Section -->
+    <!-- NEW SECTION: Partners Section -->
     <section class="partners" ref="partnersSection">
-  <div class="container">
-    <h2 class="section-title animated fade-in-up">{{ t('about.partners.title') }}</h2>
-    <p class="section-description animated fade-in-up delay-1">{{ t('about.partners.description') }}</p>
-    
-    <div class="partners-content">
-      <div class="clients-section animated fade-in-left delay-2">
-        <h3 class="subsection-title">{{ t('about.partners.clients.title') }}</h3>
-        <ul class="client-list">
-          <li v-for="(client, index) in clientItems" :key="index" class="client-item" :style="`--i: ${index + 3};`">
-            {{ client }}
-          </li>
-        </ul>
-      </div>
-      
-      <div class="suppliers-section animated fade-in-right delay-2">
-        <h3 class="subsection-title">{{ t('about.partners.suppliers.title') }}</h3>
-        <p class="suppliers-text">{{ t('about.partners.suppliers.text') }}</p>
-        <div class="supplier-logos">
-          <!-- Placeholder logos for key suppliers -->
+      <div class="container">
+        <h2 class="section-title animated fade-in-up">{{ t('about.partners.title') }}</h2>
+        <p class="section-description animated fade-in-up delay-1">{{ t('about.partners.description') }}</p>
+        
+        <div class="partners-content">
+          <!-- Clients -->
+          <div class="partners-clients animated fade-in-left delay-2">
+            <h3 class="partners-subtitle">{{ t('about.partners.clients.title') }}</h3>
+            <ul class="partners-list">
+              <li class="partners-list-item">
+                <div class="list-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <span>{{ t('about.partners.clients.tco') }}</span>
+              </li>
+              <li class="partners-list-item">
+                <div class="list-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <span>{{ t('about.partners.clients.kpo') }}</span>
+              </li>
+              <li class="partners-list-item">
+                <div class="list-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <span>{{ t('about.partners.clients.ncoc') }}</span>
+              </li>
+              <li class="partners-list-item">
+                <div class="list-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <span>{{ t('about.partners.clients.other') }}</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Suppliers -->
+          <div class="partners-suppliers animated fade-in-right delay-2">
+            <h3 class="partners-subtitle">{{ t('about.partners.suppliers.title') }}</h3>
+            <p class="suppliers-text">{{ t('about.partners.suppliers.list') }}</p>
+            <div class="supplier-logos">
+              <div class="supplier-logo">John Crane</div>
+              <div class="supplier-logo">Loctite</div>
+              <div class="supplier-logo">Siemens</div>
+              <div class="supplier-logo">Honeywell</div>
+              <div class="supplier-logo">Hempel</div>
+              <div class="supplier-logo">Tyco</div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <!-- Certificates Section -->
     <section class="certificates" ref="certificatesSection">
@@ -221,7 +337,6 @@ import { useI18n } from 'vue-i18n';
 /* --- SETUP I18N --- */
 const { t } = useI18n();
 
-
 /* --- SECTION REFS --- */
 const overviewSection = ref(null);
 const missionSection = ref(null);
@@ -231,7 +346,11 @@ const partnersSection = ref(null);
 const certificatesSection = ref(null);
 const ctaSection = ref(null);
 
-/* --- COMPUTED PROPERTIES --- */
+/* 
+  MAIN FIX:
+  Use a computed property for `certificates` 
+  so it re-runs `t()` whenever the locale changes.
+*/
 const certificates = computed(() => [
   {
     name: 'ISO 9001:2015',
@@ -249,48 +368,6 @@ const certificates = computed(() => [
     image: '/images/ohsas_18001.png'
   }
 ]);
-
-// Correctly access the array items with computed properties
-const serviceItems = computed(() => {
-  const rawText = t('about.services.items');
-  return rawText
-    .split('|')
-    .filter((item) => item.trim() !== '')
-});
-
-const industryItems = computed(() => {
-  const rawText = t('about.industries.items');
-  return rawText
-    .split('|')
-    .filter((item) => item.trim() !== '')
-});
-
-const clientItems = computed(() => {
-  const rawText = t('about.partners.clients.items');
-  return rawText
-    .split('|')
-    .filter((item) => item.trim() !== '')
-});
-
-/* --- HELPER FUNCTIONS --- */
-// Function to get appropriate industry icon based on index
-const getIndustryIcon = (index) => {
-  // Create a factory function that returns a component
-  switch (index) {
-    case 0: // Oil and gas
-      return OilGasIcon;
-    case 1: // Energy
-      return EnergyIcon;
-    case 2: // Chemical
-      return ChemicalIcon;
-    case 3: // Mining
-      return MiningIcon;
-    case 4: // Construction
-      return ConstructionIcon;
-    default:
-      return OilGasIcon; // Default icon as fallback
-  }
-};
 
 /* --- ICON COMPONENTS --- */
 const QualityIcon = () =>
@@ -369,115 +446,6 @@ const FeedbackIcon = () =>
     'stroke-linejoin': 'round' 
   }, [
     h('path', { d: 'M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z' })
-  ]);
-
-// New icons for added sections as separate components
-const ServiceIcon = () =>
-  h('svg', { 
-    xmlns: 'http://www.w3.org/2000/svg', 
-    width: '24', 
-    height: '24', 
-    viewBox: '0 0 24 24', 
-    fill: 'none', 
-    stroke: 'currentColor', 
-    'stroke-width': '2', 
-    'stroke-linecap': 'round', 
-    'stroke-linejoin': 'round' 
-  }, [
-    h('circle', { cx: '12', cy: '12', r: '10' }),
-    h('polyline', { points: '8 12 12 16 16 12' }),
-    h('line', { x1: '12', y1: '8', x2: '12', y2: '16' })
-  ]);
-
-// Define individual industry icons instead of a dynamic component
-const OilGasIcon = () =>
-  h('svg', { 
-    xmlns: 'http://www.w3.org/2000/svg', 
-    width: '24', 
-    height: '24', 
-    viewBox: '0 0 24 24', 
-    fill: 'none', 
-    stroke: 'currentColor', 
-    'stroke-width': '2', 
-    'stroke-linecap': 'round', 
-    'stroke-linejoin': 'round' 
-  }, [
-    h('path', { d: 'M3 22h18' }),
-    h('path', { d: 'M10 10v12' }),
-    h('path', { d: 'M14 10v12' }),
-    h('path', { d: 'M10 14h4' }),
-    h('path', { d: 'M8 2h8l4 8H4l4-8z' })
-  ]);
-
-const EnergyIcon = () =>
-  h('svg', { 
-    xmlns: 'http://www.w3.org/2000/svg', 
-    width: '24', 
-    height: '24', 
-    viewBox: '0 0 24 24', 
-    fill: 'none', 
-    stroke: 'currentColor', 
-    'stroke-width': '2', 
-    'stroke-linecap': 'round', 
-    'stroke-linejoin': 'round' 
-  }, [
-    h('path', { d: 'M13 2L3 14h9l-1 8 10-12h-9l1-8z' })
-  ]);
-
-const ChemicalIcon = () =>
-  h('svg', { 
-    xmlns: 'http://www.w3.org/2000/svg', 
-    width: '24', 
-    height: '24', 
-    viewBox: '0 0 24 24', 
-    fill: 'none', 
-    stroke: 'currentColor', 
-    'stroke-width': '2', 
-    'stroke-linecap': 'round', 
-    'stroke-linejoin': 'round' 
-  }, [
-    h('path', { d: 'M8 3v3a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V3' }),
-    h('path', { d: 'M10 12h4' }),
-    h('path', { d: 'M9 8h6' }),
-    h('path', { d: 'M10 20v-8a2 2 0 0 1 4 0v8' }),
-    h('path', { d: 'M7 20h10' })
-  ]);
-
-const MiningIcon = () =>
-  h('svg', { 
-    xmlns: 'http://www.w3.org/2000/svg', 
-    width: '24', 
-    height: '24', 
-    viewBox: '0 0 24 24', 
-    fill: 'none', 
-    stroke: 'currentColor', 
-    'stroke-width': '2', 
-    'stroke-linecap': 'round', 
-    'stroke-linejoin': 'round' 
-  }, [
-    h('path', { d: 'M14 10a2 2 0 0 1-2 2c-1.9 0-3-1.7-3-3.5S10.1 5 12 5a2 2 0 0 1 2 2' }),
-    h('path', { d: 'M12 15v4' }),
-    h('path', { d: 'M10 19h4' }),
-    h('circle', { cx: '12', cy: '12', r: '10' })
-  ]);
-
-const ConstructionIcon = () =>
-  h('svg', { 
-    xmlns: 'http://www.w3.org/2000/svg', 
-    width: '24', 
-    height: '24', 
-    viewBox: '0 0 24 24', 
-    fill: 'none', 
-    stroke: 'currentColor', 
-    'stroke-width': '2', 
-    'stroke-linecap': 'round', 
-    'stroke-linejoin': 'round' 
-  }, [
-    h('path', { d: 'M2 21v-2a4 4 0 0 1 4-4h14' }),
-    h('path', { d: 'M12 7V3h6v4' }),
-    h('path', { d: 'M12 7H8a2 2 0 0 0-2 2v4a2 2 0 0 0 4 0v-1' }),
-    h('path', { d: 'M16 15V5h2' }),
-    h('line', { x1: '16', y1: '11', x2: '22', y2: '11' })
   ]);
 
 /* --- INTERSECTION OBSERVER FOR ANIMATIONS --- */
@@ -730,7 +698,6 @@ section {
   margin-bottom: 30px;
   color: #ccc;
   line-height: 1.7;
-  font-size: 1.15rem;
 }
 
 .stats-container {
@@ -873,50 +840,35 @@ section {
   line-height: 1.6;
 }
 
-/* Services Section */
+/* Services Section - NEW */
 .services {
   background-color: #1e1e1e;
   color: white;
-  position: relative;
 }
 
-.services::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(30deg, rgba(255, 87, 34, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(255, 87, 34, 0.03) 87.5%, rgba(255, 87, 34, 0.03)),
-                    linear-gradient(150deg, rgba(255, 87, 34, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(255, 87, 34, 0.03) 87.5%, rgba(255, 87, 34, 0.03));
-  background-size: 60px 60px;
-  opacity: 0.3;
-  pointer-events: none;
-}
-
-.services-list {
-  max-width: 900px;
-  margin: 30px auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 40px;
 }
 
 .service-item {
-  display: flex;
-  align-items: center;
   background-color: rgba(42, 42, 42, 0.6);
   border-radius: 8px;
-  padding: 20px 30px;
+  padding: 25px;
+  display: flex;
+  align-items: flex-start;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
-  border-left: 4px solid #ff5722;
-  animation-delay: calc(0.1s * var(--i));
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .service-item:hover {
-  transform: translateX(10px);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   background-color: rgba(42, 42, 42, 0.8);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 87, 34, 0.2);
 }
 
 .service-icon {
@@ -925,17 +877,24 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgba(255, 87, 34, 0.15);
+  border-radius: 50%;
   color: #ff5722;
   margin-right: 20px;
+  transition: all 0.3s ease;
+}
+
+.service-item:hover .service-icon {
+  background-color: rgba(255, 87, 34, 0.25);
+  transform: scale(1.1);
 }
 
 .service-text {
-  font-size: 1.1rem;
-  color: #eee;
+  color: #ccc;
   line-height: 1.6;
 }
 
-/* Industries Section */
+/* Industries Section - NEW */
 .industries {
   background-color: #232323;
   color: white;
@@ -949,37 +908,33 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(rgba(255, 87, 34, 0.1) 2px, transparent 2px);
-  background-size: 30px 30px;
-  opacity: 0.2;
+  background-image: url('/images/subtle-pattern.png');
+  opacity: 0.05;
   pointer-events: none;
 }
 
 .industries-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-top: 40px;
 }
 
 .industry-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 30px 20px;
   background-color: rgba(42, 42, 42, 0.6);
   border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
-  border-top: 3px solid transparent;
-  animation-delay: calc(0.1s * var(--i));
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .industry-item:hover {
   transform: translateY(-10px);
-  border-top-color: #ff5722;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   background-color: rgba(42, 42, 42, 0.8);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 87, 34, 0.2);
 }
 
 .industry-icon {
@@ -988,25 +943,25 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 87, 34, 0.1);
+  background-color: rgba(255, 87, 34, 0.15);
   border-radius: 50%;
   color: #ff5722;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
   transition: all 0.3s ease;
 }
 
 .industry-item:hover .industry-icon {
-  background-color: rgba(255, 87, 34, 0.2);
+  background-color: rgba(255, 87, 34, 0.25);
   transform: scale(1.1);
 }
 
-.industry-name {
+.industry-title {
   font-size: 1.2rem;
   font-weight: 600;
   color: white;
 }
 
-/* Partners Section */
+/* Partners Section - NEW */
 .partners {
   background-color: #1e1e1e;
   color: white;
@@ -1014,107 +969,147 @@ section {
 
 .partners-content {
   display: flex;
-  gap: 60px;
+  gap: 40px;
   margin-top: 40px;
 }
 
-.clients-section, .suppliers-section {
+.partners-clients, .partners-suppliers {
   flex: 1;
+  background-color: rgba(42, 42, 42, 0.6);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.subsection-title {
+.partners-subtitle {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   color: white;
   position: relative;
   padding-bottom: 10px;
 }
 
-.subsection-title::after {
+.partners-subtitle::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 40px;
   height: 2px;
-  background: #ff5722;
+  background: linear-gradient(90deg, #ff5722 0%, #ff9800 100%);
 }
 
-.client-list {
+.partners-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.client-item {
-  position: relative;
-  padding: 15px 0 15px 30px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 1.1rem;
-  color: #ddd;
-  transition: all 0.3s ease;
-  animation-delay: calc(0.1s * var(--i));
+.partners-list-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
 }
 
-.client-item:hover {
+.partners-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.list-icon {
+  min-width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #ff5722;
-  padding-left: 35px;
-}
-
-.client-item::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 8px;
-  height: 8px;
-  background-color: #ff5722;
-  border-radius: 50%;
+  margin-right: 15px;
 }
 
 .suppliers-text {
   color: #ccc;
-  line-height: 1.7;
-  margin-bottom: 30px;
-  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
 }
 
 .supplier-logos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 30px;
+  gap: 15px;
 }
 
 .supplier-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
-  height: 100px;
+  border-radius: 6px;
+  padding: 15px 10px;
+  text-align: center;
+  font-weight: 500;
+  color: #ddd;
   transition: all 0.3s ease;
 }
 
 .supplier-logo:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  transform: translateY(-5px);
+  background-color: rgba(255, 87, 34, 0.1);
+  color: #ff5722;
+  transform: translateY(-3px);
 }
 
-.placeholder-logo {
-  width: 70px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px dashed rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  color: rgba(255, 255, 255, 0.3);
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+/* Our Team Section */
+.our-team {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.team-member {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.team-member__photo {
+  height: 300px;
+  overflow: hidden;
+}
+
+.team-member__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.team-member:hover .team-member__photo img {
+  transform: scale(1.05);
+}
+
+.team-member__info {
+  padding: 20px;
+  text-align: center;
+}
+
+.team-member__name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.team-member__position {
+  font-size: 0.9rem;
+  color: #ccc;
 }
 
 /* Certificates Section */
@@ -1361,7 +1356,8 @@ section.visible .animated {
     font-size: 3rem;
   }
   
-  .supplier-logos {
+  .mission-values-grid, 
+  .industries-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -1388,13 +1384,12 @@ section.visible .animated {
     max-width: 100%;
   }
   
-  .mission-values-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
   .partners-content {
     flex-direction: column;
-    gap: 40px;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1429,12 +1424,12 @@ section.visible .animated {
     margin-bottom: 20px;
   }
   
-  .particle-1, .particle-5 {
-    opacity: 0.3;
-  }
-  
   .industries-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .particle-1, .particle-5 {
+    opacity: 0.3;
   }
 }
 
@@ -1464,7 +1459,8 @@ section.visible .animated {
     grid-template-columns: 1fr;
   }
   
-  .certificates-grid {
+  .certificates-grid,
+  .industries-grid {
     grid-template-columns: 1fr;
   }
   
@@ -1484,17 +1480,12 @@ section.visible .animated {
     width: 100%;
   }
   
+  .supplier-logos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
   .particle-2, .particle-4, .particle-6 {
     opacity: 0.2;
   }
-  
-  .industries-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .supplier-logos {
-    grid-template-columns: 1fr;
-  }
 }
-
 </style>

@@ -124,31 +124,6 @@ const en = {
       }
     },
     
-    "services": {
-      "title": "Our Services",
-      "description": "We provide a range of services including:",
-      "items": "|Supply of original equipment and components to order|Technical selection based on specifications and operating conditions|Search for manufacturers and work with OEM codes|Selection of alternatives for discontinued products|Turnkey logistics and customs support|Support in tender participation and documentation preparation"
-    },
-    
-    industries: {
-      title: 'Industries We Serve',
-      description: 'Our products are supplied to facilities and enterprises in the following industries:',
-      items: "|Oil and gas industry|Energy sector|Chemical industry|Mining and metallurgical complex|Civil and industrial construction|"
-    },
-    
-    partners: {
-      title: 'Our Partners',
-      description: 'We work directly with manufacturers from Europe, Asia, USA, Australia and other countries, providing customers with original products and official certificates.',
-      clients: {
-        title: 'Among our clients:',
-        items:"|Tengizchevroil (TCO)|Karachaganak Petroleum Operating (KPO)|North Caspian Operating Company (NCOC)|Construction and industrial companies throughout Kazakhstan'"
-      },
-      suppliers: {
-        title: 'Our suppliers - industry leaders:',
-        text: 'John Crane, Loctite, Siemens, Honeywell, Hempel, Tyco, Pall and others.'
-      }
-    },
-    
     team: {
       title: 'Our Professional Team',
       description: 'The strength of ARG Trading and Co. lies in our team of dedicated professionals with years of experience in the industrial equipment sector.',
@@ -157,6 +132,48 @@ const en = {
         salesDirector: 'Sales Director',
         techDirector: 'Technical Director',
         logisticsManager: 'Logistics Manager'
+      }
+    },
+
+    services: {
+      title: 'Our Services',
+      description: 'We provide a comprehensive range of services including:',
+      items: {
+        supplying: 'Supply of original equipment and components upon request',
+        technical: 'Technical product selection based on specifications and operating conditions',
+        search: 'Search for manufacturers and work with OEM codes',
+        analogues: 'Selection of alternatives when products are discontinued',
+        logistics: 'Turnkey logistics and customs support',
+        tender: 'Support for participation in tenders and preparation of documentation'
+      }
+    },
+    
+    // New Industries section
+    industries: {
+      title: 'Industries We Serve',
+      description: 'Our products are supplied to facilities and enterprises in the following industries:',
+      items: {
+        oil: 'Oil and gas industry',
+        energy: 'Energy sector',
+        chemical: 'Chemical industry',
+        mining: 'Mining and metallurgical complex',
+        construction: 'Civil and industrial construction'
+      }
+    },
+
+    partners: {
+      title: 'Our Partners',
+      description: 'We work directly with manufacturers from Europe, Asia, USA, Australia, and other countries, providing customers with original products and official certificates.',
+      clients: {
+        title: 'Among our clients:',
+        tco: 'Tengizchevroil (TCO)',
+        kpo: 'Karachaganak Petroleum Operating (KPO)',
+        ncoc: 'North Caspian Operating Company (NCOC)',
+        other: 'Construction and industrial companies throughout Kazakhstan'
+      },
+      suppliers: {
+        title: 'Our suppliers are industry leaders:',
+        list: 'John Crane, Loctite, Siemens, Honeywell, Hempel, Tyco, Pall, and others.'
       }
     },
     
@@ -314,7 +331,7 @@ const en = {
       },
       address: {
         title: 'Address',
-        value: 'Astana, Syganak St. 60/2',
+        value: 'Astana, Yesil district, 33 Kunaeva St., office 313',
         getDirections: 'Get directions'
       },
       hours: {
@@ -354,7 +371,7 @@ const en = {
     
     officeLocation: {
       title: 'Our Main Office',
-      address: 'Astana, Syganak St. 60/2',
+      address: 'Astana, Yesil district, 33 Kunaeva St., office 313',
       directions: 'Located in the central business district, near Central Station.',
       hoursTitle: 'Working Hours',
       hours: 'Monday to Friday: 9:00 AM - 6:00 PM'
@@ -561,31 +578,6 @@ const ru = {
       }
     },
     
-    "services": {
-      "title": "Услуги",
-      "description": "Мы предоставляем комплекс услуг, включающих:",
-      "items": "|Поставку оригинального оборудования и комплектующих под заказ|Технический подбор продукции на основе спецификаций и условий эксплуатации|Поиск заводов-изготовителей и работа по OEM-кодам|Подбор аналогов при снятии с производства|Логистику и таможенное сопровождение \"под ключ\"|Поддержку в участии в тендерах и подготовке документации"
-    },
-    
-    industries: {
-      title: 'Отрасли',
-      description: 'Наша продукция поставляется на объекты и предприятия в следующих отраслях:',
-      items: "|Нефтегазовая промышленность|Энергетика|Химическая промышленность|Горно-металлургический комплекс|Гражданское и промышленное строительство"
-    },
-    
-    partners: {
-      title: 'Партнёры',
-      description: 'Мы работаем напрямую с производителями из Европы, Азии, США, Австралии и других стран, предоставляя клиентам оригинальную продукцию и официальные сертификаты.',
-      clients: {
-        title: 'Среди наших клиентов:',
-        items: "|Тенгизшевройл (TCO)|Карачаганак Петролиум Оперейтинг (KPO)|Норт Каспиан Оперейтинг Компани (NCOC)|Строительные и промышленные компании по всей РК"
-      },
-      suppliers: {
-        title: 'Наши поставщики — лидеры отрасли:',
-        text: 'John Crane, Loctite, Siemens, Honeywell, Hempel, Tyco, Pall и другие.'
-      }
-    },
-    
     team: {
       title: 'Наша профессиональная команда',
       description: 'Сила ARG Trading and Co. заключается в нашей команде преданных своему делу профессионалов с многолетним опытом работы в секторе промышленного оборудования.',
@@ -594,6 +586,48 @@ const ru = {
         salesDirector: 'Директор по продажам',
         techDirector: 'Технический директор',
         logisticsManager: 'Менеджер по логистике'
+      }
+    },
+
+    services: {
+      title: 'Услуги',
+      description: 'Мы предоставляем комплекс услуг, включающих:',
+      items: {
+        supplying: 'Поставку оригинального оборудования и комплектующих под заказ',
+        technical: 'Технический подбор продукции на основе спецификаций и условий эксплуатации',
+        search: 'Поиск заводов-изготовителей и работа по OEM-кодам',
+        analogues: 'Подбор аналогов при снятии с производства',
+        logistics: 'Логистику и таможенное сопровождение "под ключ"',
+        tender: 'Поддержку в участии в тендерах и подготовке документации'
+      }
+    },
+    
+    // New Industries section in Russian
+    industries: {
+      title: 'Отрасли',
+      description: 'Наша продукция поставляется на объекты и предприятия в следующих отраслях:',
+      items: {
+        oil: 'Нефтегазовая промышленность',
+        energy: 'Энергетика',
+        chemical: 'Химическая промышленность',
+        mining: 'Горно-металлургический комплекс',
+        construction: 'Гражданское и промышленное строительство'
+      }
+    },
+
+    partners: {
+      title: 'Партнёры',
+      description: 'Мы работаем напрямую с производителями из Европы, Азии, США, Австралии и других стран, предоставляя клиентам оригинальную продукцию и официальные сертификаты.',
+      clients: {
+        title: 'Среди наших клиентов:',
+        tco: 'Тенгизшевройл (TCO)',
+        kpo: 'Карачаганак Петролиум Оперейтинг (KPO)',
+        ncoc: 'Норт Каспиан Оперейтинг Компани (NCOC)',
+        other: 'Строительные и промышленные компании по всей РК'
+      },
+      suppliers: {
+        title: 'Наши поставщики — лидеры отрасли:',
+        list: 'John Crane, Loctite, Siemens, Honeywell, Hempel, Tyco, Pall и другие.'
       }
     },
     
@@ -751,7 +785,7 @@ const ru = {
       },
       address: {
         title: 'Адрес',
-        value: 'г.Астана, ул. Сыганак 60/2',
+        value: 'г. Астана, район Есиль, ул. Кунаева 33, офис 313',
         getDirections: 'Проложить маршрут'
       },
       hours: {
@@ -791,7 +825,7 @@ const ru = {
     
     officeLocation: {
       title: 'Наш главный офис',
-      address: 'г.Астана, ул. Сыганак 60/2',
+      address: 'г. Астана, район Есиль, ул. Кунаева 33, офис 313',
       directions: 'Расположен в центральном деловом районе, рядом с Центральным вокзалом.',
       hoursTitle: 'Рабочие часы',
       hours: 'Понедельник - Пятница: 9:00 - 18:00'
