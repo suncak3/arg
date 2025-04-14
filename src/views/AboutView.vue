@@ -53,7 +53,7 @@
       </div>
     </section>
 
-    <!-- Our Mission Section - Redesigned -->
+    <!-- Our Mission Section - Redesigned to "Our Values and Goal" -->
     <section class="our-mission" ref="missionSection">
       <div class="container">
         <h2 class="section-title animated fade-in-up">{{ t('about.mission.title') }}</h2>
@@ -87,10 +87,93 @@
               <h3>{{ t('about.mission.values.innovation.title') }}</h3>
               <p>{{ t('about.mission.values.innovation.text') }}</p>
             </div>
+            
+            <div class="value-card animated fade-in-up" style="--i: 5;">
+              <div class="value-icon">
+                <MarketKnowledgeIcon />
+              </div>
+              <h3>{{ t('about.mission.values.marketKnowledge.title') }}</h3>
+              <p>{{ t('about.mission.values.marketKnowledge.text') }}</p>
+            </div>
+            
+            <div class="value-card animated fade-in-up" style="--i: 6;">
+              <div class="value-icon">
+                <FeedbackIcon />
+              </div>
+              <h3>{{ t('about.mission.values.feedback.title') }}</h3>
+              <p>{{ t('about.mission.values.feedback.text') }}</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Services Section -->
+    <section class="services">
+    <div class="container">
+      <h2 class="section-title">{{ t('about.services.title') }}</h2>
+      <p class="section-description">{{ t('about.services.description') }}</p>
+
+      <div class="services-list">
+        <div
+          class="service-item"
+          v-for="(item, index) in serviceItems"
+          :key="index"
+        >
+          <div class="service-icon">
+            <ServiceIcon />
+          </div>
+          <p class="service-text">{{ item }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Industries Section -->
+    <section class="industries" ref="industriesSection">
+  <div class="container">
+    <h2 class="section-title animated fade-in-up">{{ t('about.industries.title') }}</h2>
+    <p class="section-description animated fade-in-up delay-1">{{ t('about.industries.description') }}</p>
+    
+    <div class="industries-list">
+      <div class="industry-item" v-for="(item, index) in industryItems" :key="index">
+        <div class="service-icon">
+          <ServiceIcon />
+        </div>
+        <p class="service-text">{{ item }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Partners Section -->
+    <section class="partners" ref="partnersSection">
+  <div class="container">
+    <h2 class="section-title animated fade-in-up">{{ t('about.partners.title') }}</h2>
+    <p class="section-description animated fade-in-up delay-1">{{ t('about.partners.description') }}</p>
+    
+    <div class="partners-content">
+      <div class="clients-section animated fade-in-left delay-2">
+        <h3 class="subsection-title">{{ t('about.partners.clients.title') }}</h3>
+        <ul class="client-list">
+          <li v-for="(client, index) in clientItems" :key="index" class="client-item" :style="`--i: ${index + 3};`">
+            {{ client }}
+          </li>
+        </ul>
+      </div>
+      
+      <div class="suppliers-section animated fade-in-right delay-2">
+        <h3 class="subsection-title">{{ t('about.partners.suppliers.title') }}</h3>
+        <p class="suppliers-text">{{ t('about.partners.suppliers.text') }}</p>
+        <div class="supplier-logos">
+          <!-- Placeholder logos for key suppliers -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Certificates Section -->
     <section class="certificates" ref="certificatesSection">
@@ -99,7 +182,12 @@
         <p class="section-description animated fade-in-up delay-1">{{ t('about.certificates.description') }}</p>
         
         <div class="certificates-grid">
-          <div class="certificate-item animated fade-in-up" style="--i: 2;" v-for="(certificate, index) in certificates" :key="index">
+          <div 
+            class="certificate-item animated fade-in-up" 
+            style="--i: 2;" 
+            v-for="(certificate, index) in certificates" 
+            :key="index"
+          >
             <div class="certificate-image">
               <img :src="certificate.image" :alt="certificate.name" loading="lazy">
             </div>
@@ -126,95 +214,25 @@
 </template>
 
 <script setup>
-import { ref, onMounted, h } from 'vue';
+/* --- IMPORTS --- */
+import { ref, onMounted, h, computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 
+/* --- SETUP I18N --- */
 const { t } = useI18n();
 
-// Section refs for animation
+
+/* --- SECTION REFS --- */
 const overviewSection = ref(null);
 const missionSection = ref(null);
+const servicesSection = ref(null);
+const industriesSection = ref(null);
+const partnersSection = ref(null);
 const certificatesSection = ref(null);
 const ctaSection = ref(null);
 
-// Initialize intersection observer for scroll animations
-onMounted(() => {
-  const observerOptions = {
-    threshold: 0.2,
-    rootMargin: '0px 0px -100px 0px'
-  };
-
-  const handleIntersection = (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Add visible class to the section
-        entry.target.classList.add('visible');
-        
-        // Find and animate all elements with animation classes
-        const animatedElements = entry.target.querySelectorAll('.animated');
-        animatedElements.forEach(el => {
-          el.style.animationPlayState = 'running';
-        });
-      }
-    });
-  };
-
-  const observer = new IntersectionObserver(handleIntersection, observerOptions);
-  
-  // Observe all sections that need animation
-  document.querySelectorAll('section').forEach(section => {
-    observer.observe(section);
-  });
-});
-
-// Values icons
-const QualityIcon = () => h('svg', { 
-  xmlns: 'http://www.w3.org/2000/svg', 
-  width: '24', 
-  height: '24', 
-  viewBox: '0 0 24 24', 
-  fill: 'none', 
-  stroke: 'currentColor', 
-  'stroke-width': '2', 
-  'stroke-linecap': 'round', 
-  'stroke-linejoin': 'round' 
-}, [
-  h('path', { d: 'M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z' })
-]);
-
-const ReliabilityIcon = () => h('svg', { 
-  xmlns: 'http://www.w3.org/2000/svg', 
-  width: '24', 
-  height: '24', 
-  viewBox: '0 0 24 24', 
-  fill: 'none', 
-  stroke: 'currentColor', 
-  'stroke-width': '2', 
-  'stroke-linecap': 'round', 
-  'stroke-linejoin': 'round' 
-}, [
-  h('path', { d: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z' })
-]);
-
-const InnovationIcon = () => h('svg', { 
-  xmlns: 'http://www.w3.org/2000/svg', 
-  width: '24', 
-  height: '24', 
-  viewBox: '0 0 24 24', 
-  fill: 'none', 
-  stroke: 'currentColor', 
-  'stroke-width': '2', 
-  'stroke-linecap': 'round', 
-  'stroke-linejoin': 'round' 
-}, [
-  h('circle', { cx: '12', cy: '12', r: '10' }),
-  h('line', { x1: '2', y1: '12', x2: '22', y2: '12' }),
-  h('path', { d: 'M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z' })
-]);
-
-
-// Certificates data
-const certificates = [
+/* --- COMPUTED PROPERTIES --- */
+const certificates = computed(() => [
   {
     name: 'ISO 9001:2015',
     description: t('about.certificates.items.iso9001'),
@@ -230,10 +248,269 @@ const certificates = [
     description: t('about.certificates.items.ohsas18001'),
     image: '/images/ohsas_18001.png'
   }
-];
+]);
+
+// Correctly access the array items with computed properties
+const serviceItems = computed(() => {
+  const rawText = t('about.services.items');
+  return rawText
+    .split('|')
+    .filter((item) => item.trim() !== '')
+});
+
+const industryItems = computed(() => {
+  const rawText = t('about.industries.items');
+  return rawText
+    .split('|')
+    .filter((item) => item.trim() !== '')
+});
+
+const clientItems = computed(() => {
+  const rawText = t('about.partners.clients.items');
+  return rawText
+    .split('|')
+    .filter((item) => item.trim() !== '')
+});
+
+/* --- HELPER FUNCTIONS --- */
+// Function to get appropriate industry icon based on index
+const getIndustryIcon = (index) => {
+  // Create a factory function that returns a component
+  switch (index) {
+    case 0: // Oil and gas
+      return OilGasIcon;
+    case 1: // Energy
+      return EnergyIcon;
+    case 2: // Chemical
+      return ChemicalIcon;
+    case 3: // Mining
+      return MiningIcon;
+    case 4: // Construction
+      return ConstructionIcon;
+    default:
+      return OilGasIcon; // Default icon as fallback
+  }
+};
+
+/* --- ICON COMPONENTS --- */
+const QualityIcon = () =>
+  h('svg', { 
+    xmlns: 'http://www.w3.org/2000/svg', 
+    width: '24', 
+    height: '24', 
+    viewBox: '0 0 24 24', 
+    fill: 'none', 
+    stroke: 'currentColor', 
+    'stroke-width': '2', 
+    'stroke-linecap': 'round', 
+    'stroke-linejoin': 'round' 
+  }, [
+    h('path', { d: 'M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z' })
+  ]);
+
+const ReliabilityIcon = () =>
+  h('svg', { 
+    xmlns: 'http://www.w3.org/2000/svg', 
+    width: '24', 
+    height: '24', 
+    viewBox: '0 0 24 24', 
+    fill: 'none', 
+    stroke: 'currentColor', 
+    'stroke-width': '2', 
+    'stroke-linecap': 'round', 
+    'stroke-linejoin': 'round' 
+  }, [
+    h('path', { d: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z' })
+  ]);
+
+const InnovationIcon = () =>
+  h('svg', { 
+    xmlns: 'http://www.w3.org/2000/svg', 
+    width: '24', 
+    height: '24', 
+    viewBox: '0 0 24 24', 
+    fill: 'none', 
+    stroke: 'currentColor', 
+    'stroke-width': '2', 
+    'stroke-linecap': 'round', 
+    'stroke-linejoin': 'round' 
+  }, [
+    h('circle', { cx: '12', cy: '12', r: '10' }),
+    h('line', { x1: '2', y1: '12', x2: '22', y2: '12' }),
+    h('path', { d: 'M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z' })
+  ]);
+
+const MarketKnowledgeIcon = () =>
+  h('svg', { 
+    xmlns: 'http://www.w3.org/2000/svg', 
+    width: '24', 
+    height: '24', 
+    viewBox: '0 0 24 24', 
+    fill: 'none', 
+    stroke: 'currentColor', 
+    'stroke-width': '2', 
+    'stroke-linecap': 'round', 
+    'stroke-linejoin': 'round' 
+  }, [
+    h('path', { d: 'M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z' }),
+    h('path', { d: 'M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z' })
+  ]);
+
+const FeedbackIcon = () =>
+  h('svg', { 
+    xmlns: 'http://www.w3.org/2000/svg', 
+    width: '24', 
+    height: '24', 
+    viewBox: '0 0 24 24', 
+    fill: 'none', 
+    stroke: 'currentColor', 
+    'stroke-width': '2', 
+    'stroke-linecap': 'round', 
+    'stroke-linejoin': 'round' 
+  }, [
+    h('path', { d: 'M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z' })
+  ]);
+
+// New icons for added sections as separate components
+const ServiceIcon = () =>
+  h('svg', { 
+    xmlns: 'http://www.w3.org/2000/svg', 
+    width: '24', 
+    height: '24', 
+    viewBox: '0 0 24 24', 
+    fill: 'none', 
+    stroke: 'currentColor', 
+    'stroke-width': '2', 
+    'stroke-linecap': 'round', 
+    'stroke-linejoin': 'round' 
+  }, [
+    h('circle', { cx: '12', cy: '12', r: '10' }),
+    h('polyline', { points: '8 12 12 16 16 12' }),
+    h('line', { x1: '12', y1: '8', x2: '12', y2: '16' })
+  ]);
+
+// Define individual industry icons instead of a dynamic component
+const OilGasIcon = () =>
+  h('svg', { 
+    xmlns: 'http://www.w3.org/2000/svg', 
+    width: '24', 
+    height: '24', 
+    viewBox: '0 0 24 24', 
+    fill: 'none', 
+    stroke: 'currentColor', 
+    'stroke-width': '2', 
+    'stroke-linecap': 'round', 
+    'stroke-linejoin': 'round' 
+  }, [
+    h('path', { d: 'M3 22h18' }),
+    h('path', { d: 'M10 10v12' }),
+    h('path', { d: 'M14 10v12' }),
+    h('path', { d: 'M10 14h4' }),
+    h('path', { d: 'M8 2h8l4 8H4l4-8z' })
+  ]);
+
+const EnergyIcon = () =>
+  h('svg', { 
+    xmlns: 'http://www.w3.org/2000/svg', 
+    width: '24', 
+    height: '24', 
+    viewBox: '0 0 24 24', 
+    fill: 'none', 
+    stroke: 'currentColor', 
+    'stroke-width': '2', 
+    'stroke-linecap': 'round', 
+    'stroke-linejoin': 'round' 
+  }, [
+    h('path', { d: 'M13 2L3 14h9l-1 8 10-12h-9l1-8z' })
+  ]);
+
+const ChemicalIcon = () =>
+  h('svg', { 
+    xmlns: 'http://www.w3.org/2000/svg', 
+    width: '24', 
+    height: '24', 
+    viewBox: '0 0 24 24', 
+    fill: 'none', 
+    stroke: 'currentColor', 
+    'stroke-width': '2', 
+    'stroke-linecap': 'round', 
+    'stroke-linejoin': 'round' 
+  }, [
+    h('path', { d: 'M8 3v3a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V3' }),
+    h('path', { d: 'M10 12h4' }),
+    h('path', { d: 'M9 8h6' }),
+    h('path', { d: 'M10 20v-8a2 2 0 0 1 4 0v8' }),
+    h('path', { d: 'M7 20h10' })
+  ]);
+
+const MiningIcon = () =>
+  h('svg', { 
+    xmlns: 'http://www.w3.org/2000/svg', 
+    width: '24', 
+    height: '24', 
+    viewBox: '0 0 24 24', 
+    fill: 'none', 
+    stroke: 'currentColor', 
+    'stroke-width': '2', 
+    'stroke-linecap': 'round', 
+    'stroke-linejoin': 'round' 
+  }, [
+    h('path', { d: 'M14 10a2 2 0 0 1-2 2c-1.9 0-3-1.7-3-3.5S10.1 5 12 5a2 2 0 0 1 2 2' }),
+    h('path', { d: 'M12 15v4' }),
+    h('path', { d: 'M10 19h4' }),
+    h('circle', { cx: '12', cy: '12', r: '10' })
+  ]);
+
+const ConstructionIcon = () =>
+  h('svg', { 
+    xmlns: 'http://www.w3.org/2000/svg', 
+    width: '24', 
+    height: '24', 
+    viewBox: '0 0 24 24', 
+    fill: 'none', 
+    stroke: 'currentColor', 
+    'stroke-width': '2', 
+    'stroke-linecap': 'round', 
+    'stroke-linejoin': 'round' 
+  }, [
+    h('path', { d: 'M2 21v-2a4 4 0 0 1 4-4h14' }),
+    h('path', { d: 'M12 7V3h6v4' }),
+    h('path', { d: 'M12 7H8a2 2 0 0 0-2 2v4a2 2 0 0 0 4 0v-1' }),
+    h('path', { d: 'M16 15V5h2' }),
+    h('line', { x1: '16', y1: '11', x2: '22', y2: '11' })
+  ]);
+
+/* --- INTERSECTION OBSERVER FOR ANIMATIONS --- */
+onMounted(() => {
+  const observerOptions = {
+    threshold: 0.2,
+    rootMargin: '0px 0px -100px 0px'
+  };
+
+  const handleIntersection = (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // Animate elements within the section
+        const animatedElements = entry.target.querySelectorAll('.animated');
+        animatedElements.forEach(el => {
+          el.style.animationPlayState = 'running';
+        });
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(handleIntersection, observerOptions);
+  // Observe all sections
+  document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+  });
+});
 </script>
 
 <style scoped>
+/* --- Your CSS remains the same --- */
+
 /* Hero Section - Professional design with dynamic elements */
 .about-hero {
   position: relative;
@@ -269,12 +546,14 @@ const certificates = [
   left: 0;
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, 
+  background: linear-gradient(
+    90deg, 
     rgba(255, 87, 34, 0) 0%, 
     rgba(255, 87, 34, 0.3) 15%, 
     rgba(255, 87, 34, 0.7) 50%, 
     rgba(255, 87, 34, 0.3) 85%, 
-    rgba(255, 87, 34, 0) 100%);
+    rgba(255, 87, 34, 0) 100%
+  );
   transform: translateY(-50%);
   opacity: 0.4;
   z-index: 1;
@@ -451,6 +730,7 @@ section {
   margin-bottom: 30px;
   color: #ccc;
   line-height: 1.7;
+  font-size: 1.15rem;
 }
 
 .stats-container {
@@ -593,62 +873,248 @@ section {
   line-height: 1.6;
 }
 
-/* Our Team Section */
-.our-team {
+/* Services Section */
+.services {
+  background-color: #1e1e1e;
+  color: white;
+  position: relative;
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(30deg, rgba(255, 87, 34, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(255, 87, 34, 0.03) 87.5%, rgba(255, 87, 34, 0.03)),
+                    linear-gradient(150deg, rgba(255, 87, 34, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(255, 87, 34, 0.03) 87.5%, rgba(255, 87, 34, 0.03));
+  background-size: 60px 60px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.services-list {
+  max-width: 900px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  background-color: rgba(42, 42, 42, 0.6);
+  border-radius: 8px;
+  padding: 20px 30px;
+  transition: all 0.3s ease;
+  border-left: 4px solid #ff5722;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+.service-item:hover {
+  transform: translateX(10px);
+  background-color: rgba(42, 42, 42, 0.8);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+  min-width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff5722;
+  margin-right: 20px;
+}
+
+.service-text {
+  font-size: 1.1rem;
+  color: #eee;
+  line-height: 1.6;
+}
+
+/* Industries Section */
+.industries {
+  background-color: #232323;
+  color: white;
+  position: relative;
+}
+
+.industries::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(255, 87, 34, 0.1) 2px, transparent 2px);
+  background-size: 30px 30px;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.industry-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px;
+  background-color: rgba(42, 42, 42, 0.6);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border-top: 3px solid transparent;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+.industry-item:hover {
+  transform: translateY(-10px);
+  border-top-color: #ff5722;
+  background-color: rgba(42, 42, 42, 0.8);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.industry-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 87, 34, 0.1);
+  border-radius: 50%;
+  color: #ff5722;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.industry-item:hover .industry-icon {
+  background-color: rgba(255, 87, 34, 0.2);
+  transform: scale(1.1);
+}
+
+.industry-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* Partners Section */
+.partners {
   background-color: #1e1e1e;
   color: white;
 }
 
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  margin-top: 50px;
+.partners-content {
+  display: flex;
+  gap: 60px;
+  margin-top: 40px;
 }
 
-.team-member {
-  background-color: #2a2a2a;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.clients-section, .suppliers-section {
+  flex: 1;
 }
 
-.team-member:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-}
-
-.team-member__photo {
-  height: 300px;
-  overflow: hidden;
-}
-
-.team-member__photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.team-member:hover .team-member__photo img {
-  transform: scale(1.05);
-}
-
-.team-member__info {
-  padding: 20px;
-  text-align: center;
-}
-
-.team-member__name {
-  font-size: 1.3rem;
+.subsection-title {
+  font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
+  color: white;
+  position: relative;
+  padding-bottom: 10px;
 }
 
-.team-member__position {
-  font-size: 0.9rem;
+.subsection-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: #ff5722;
+}
+
+.client-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.client-item {
+  position: relative;
+  padding: 15px 0 15px 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.1rem;
+  color: #ddd;
+  transition: all 0.3s ease;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+.client-item:hover {
+  color: #ff5722;
+  padding-left: 35px;
+}
+
+.client-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #ff5722;
+  border-radius: 50%;
+}
+
+.suppliers-text {
   color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.supplier-logos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.supplier-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  height: 100px;
+  transition: all 0.3s ease;
+}
+
+.supplier-logo:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.placeholder-logo {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 /* Certificates Section */
@@ -894,6 +1360,10 @@ section.visible .animated {
   .about-hero__title {
     font-size: 3rem;
   }
+  
+  .supplier-logos {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 992px) {
@@ -920,6 +1390,11 @@ section.visible .animated {
   
   .mission-values-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .partners-content {
+    flex-direction: column;
+    gap: 40px;
   }
 }
 
@@ -956,6 +1431,10 @@ section.visible .animated {
   
   .particle-1, .particle-5 {
     opacity: 0.3;
+  }
+  
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1008,5 +1487,14 @@ section.visible .animated {
   .particle-2, .particle-4, .particle-6 {
     opacity: 0.2;
   }
+  
+  .industries-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .supplier-logos {
+    grid-template-columns: 1fr;
+  }
 }
+
 </style>

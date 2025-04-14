@@ -119,7 +119,7 @@
             <!-- This would be replaced with an actual map implementation -->
             <div class="map-iframe-container">
               <iframe 
-                src="https://www.google.com/maps?q=г.+Астана,+район+Есиль,+ул.+Кунаева+33,+офис+313&output=embed" 
+                src="https://www.google.com/maps?q=г.+Астана,+ул.+Сыганак+60/2&output=embed" 
                 width="100%" 
                 height="100%" 
                 style="border:0;" 
@@ -305,15 +305,15 @@
     {
       icon: PhoneIcon,
       title: t('contacts.info.phone.title'),
-      value: "+7 777 777 7777",
-      link: "tel:++77777777777",
+      value: "+7 (708) 103 48 23",
+      link: "tel:+7 (708) 103 48 23",
       linkText: t('contacts.info.phone.callUs')
     },
     {
       icon: EmailIcon,
       title: t('contacts.info.email.title'),
-      value: "info@arg.kz",
-      link: "mailto:info@arg.kz",
+      value: "info@argcorp.net",
+      link: "info@argcorp.net",
       linkText: t('contacts.info.email.writeUs')
     },
     {

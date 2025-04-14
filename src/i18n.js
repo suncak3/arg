@@ -16,7 +16,7 @@ const en = {
     welcomeText: 'ARG Trading and Co. is your reliable partner in supply and maintenance of high-quality industrial equipment. We offer comprehensive solutions for various industries and production needs.',
     
     // Hero section
-    heroTitle: 'Reliable supply of parts to keep your production running!',
+    heroTitle: 'Reliable supply of components to keep your production running!',
     heroSubtitle: 'Quality parts, fast delivery, with guaranteed service.',
     viewCatalog: 'View Catalog',
     contactUs: 'Contact Us',
@@ -89,7 +89,7 @@ const en = {
     
     overview: {
       title: 'Company Overview',
-      description: 'ARG Trading and Co. is a recognized leader in the supply of industrial equipment and components. Since our founding, we have built a reputation for reliability, quality, and outstanding service.<br><br>We specialize in providing a wide range of industrial equipment from leading global manufacturers. Our comprehensive inventory includes tools, belts, hoses, fittings, bearings, and more - everything needed to keep your production running efficiently.<br><br>Our team of experienced professionals is dedicated to helping you find the right solution for your specific needs, ensuring minimal downtime and maximum productivity.',
+      description: 'We specialize in the supply of original industrial equipment and components from leading global manufacturers.<br><br>Our activities are not related to technology implementation — we are not an engineering company. Our strength lies in a clear understanding of the market, efficient logistics, and established direct connections with manufacturers worldwide: in Europe, USA, Canada, Japan, Australia, and other countries.<br><br>We operate throughout Kazakhstan, serving both major contract holders and end operators in the oil and gas, construction, and industrial sectors.<br><br>We support projects of companies such as TCO, KPO, NCOC, as well as local enterprises, providing effective supply support.',
       stats: {
         years: 'Years of Experience',
         clients: 'Satisfied Clients',
@@ -98,21 +98,54 @@ const en = {
     },
     
     mission: {
-      title: 'Our Mission & Values',
-      description: 'Our mission is to become the most reliable partner for industrial enterprises by providing high-quality equipment and components that ensure uninterrupted operation of production facilities.<br><br>We strive to establish long-term relationships with our clients based on mutual trust, timely delivery, and professional service.',
+      title: 'Our Values and Goal',
+      description: 'Our goal is to provide enterprises in Kazakhstan with necessary components and equipment — quickly, accurately, without intermediaries.',
       values: {
         quality: {
-          title: 'Quality',
-          text: 'We offer only certified products from trusted manufacturers with full warranty support.'
+          title: 'Impeccable Service Quality',
+          text: 'We maintain the highest standards in all our services and operations.'
         },
         reliability: {
-          title: 'Reliability',
-          text: 'Timely delivery and professional service are the foundation of our business approach.'
+          title: 'Efficiency in Selection and Supply',
+          text: 'We ensure quick response and delivery times for all equipment needs.'
         },
         innovation: {
-          title: 'Innovation',
-          text: 'We continuously monitor market trends to offer the most advanced solutions.'
+          title: 'Direct Relationships with OEM Manufacturers',
+          text: 'We maintain direct connections with original equipment manufacturers.'
+        },
+        marketKnowledge: {
+          title: 'Deep Market Awareness',
+          text: 'We possess extensive knowledge of the industrial equipment market.'
+        },
+        feedback: {
+          title: 'Continuous Customer Feedback',
+          text: 'We maintain constant communication with our clients to improve our service.'
         }
+      }
+    },
+    
+    "services": {
+      "title": "Our Services",
+      "description": "We provide a range of services including:",
+      "items": "|Supply of original equipment and components to order|Technical selection based on specifications and operating conditions|Search for manufacturers and work with OEM codes|Selection of alternatives for discontinued products|Turnkey logistics and customs support|Support in tender participation and documentation preparation"
+    },
+    
+    industries: {
+      title: 'Industries We Serve',
+      description: 'Our products are supplied to facilities and enterprises in the following industries:',
+      items: "|Oil and gas industry|Energy sector|Chemical industry|Mining and metallurgical complex|Civil and industrial construction|"
+    },
+    
+    partners: {
+      title: 'Our Partners',
+      description: 'We work directly with manufacturers from Europe, Asia, USA, Australia and other countries, providing customers with original products and official certificates.',
+      clients: {
+        title: 'Among our clients:',
+        items:"|Tengizchevroil (TCO)|Karachaganak Petroleum Operating (KPO)|North Caspian Operating Company (NCOC)|Construction and industrial companies throughout Kazakhstan'"
+      },
+      suppliers: {
+        title: 'Our suppliers - industry leaders:',
+        text: 'John Crane, Loctite, Siemens, Honeywell, Hempel, Tyco, Pall and others.'
       }
     },
     
@@ -281,7 +314,7 @@ const en = {
       },
       address: {
         title: 'Address',
-        value: 'Astana, Yesil district, 33 Kunaeva St., office 313',
+        value: 'Astana, Syganak St. 60/2',
         getDirections: 'Get directions'
       },
       hours: {
@@ -321,7 +354,7 @@ const en = {
     
     officeLocation: {
       title: 'Our Main Office',
-      address: 'Astana, Yesil district, 33 Kunaeva St., office 313',
+      address: 'Astana, Syganak St. 60/2',
       directions: 'Located in the central business district, near Central Station.',
       hoursTitle: 'Working Hours',
       hours: 'Monday to Friday: 9:00 AM - 6:00 PM'
@@ -420,7 +453,7 @@ const ru = {
     welcomeText: 'ARG Trading and Co. - ваш надежный партнер в поставке и обслуживании высококачественного промышленного оборудования. Мы предлагаем комплексные решения для различных отраслей и производственных нужд.',
     
     // Hero section
-    heroTitle: 'Надёжная поставка запчастей, чтобы ваше производство не останавливалось!',
+    heroTitle: 'Надёжная поставка комплектующих, чтобы ваше производство не останавливалось!',
     heroSubtitle: 'Точные сроки, без простоев, с гарантией качества.',
     viewCatalog: 'Смотреть каталог',
     contactUs: 'Связаться с нами',
@@ -438,7 +471,7 @@ const ru = {
     // Why Choose Us section
     whyChooseUs: {
       title: 'Почему выбирают нас',
-      description: 'Компания ARG - это признанный лидер в сфере поставок промышленного оборудования и комплектующих. Мы предлагаем широкий ассортимент продукции от ведущих мировых производителей.'
+      description: 'ARG Trading & Co. — надёжный поставщик промышленного оборудования и комплектующих. Мы работаем с ведущими производителями по всему миру, обеспечивая предприятия Казахстана качественной продукцией и высоким уровнем сервиса. Наша компания ориентирована на прямые поставки от OEM-производителей, гарантируя подлинность, оперативность и соответствие международным стандартам.'
     },
     
     // Advantages
@@ -488,12 +521,12 @@ const ru = {
     comingSoon: 'Наш каталог товаров будет доступен в ближайшее время. Пожалуйста, проверьте позже!'
   },
   about: {
-    heroTitle: 'О компании ARG Trading and Co.',
+    heroTitle: 'О компании ARG Trading & Co.',
     heroSubtitle: 'Ваш надежный партнер в поставке промышленного оборудования более 10 лет',
     
     overview: {
       title: 'О компании',
-      description: 'ARG Trading and Co. - признанный лидер в сфере поставок промышленного оборудования и комплектующих. С момента основания мы заработали репутацию надежного поставщика, гарантирующего высокое качество и превосходный сервис.<br><br>Мы специализируемся на поставке широкого ассортимента промышленного оборудования от ведущих мировых производителей. Наш ассортимент включает инструменты, ремни, шланги, фитинги, подшипники и многое другое - все, что необходимо для бесперебойной работы вашего производства.<br><br>Наша команда опытных профессионалов поможет вам найти правильное решение для ваших конкретных потребностей, обеспечивая минимальное время простоя и максимальную производительность.',
+      description: 'Мы специализируемся на поставках оригинального промышленного оборудования и комплектующих от ведущих мировых производителей.<br><br>Наша деятельность не связана с внедрением технологий — мы не являемся инжиниринговой компанией. Наша сила — в чётком понимании рынка, эффективной логистике и налаженных прямых связях с заводами-изготовителями по всему миру: в Европе, США, Канаде, Японии, Австралии и других странах.<br><br>Мы работаем по всему Казахстану, обслуживая как крупных контрактодержателей, так и конечных операторов в нефтегазовой, строительной и промышленной сферах.<br><br>Мы сопровождаем проекты таких компаний, как ТШО, КПО, NCOC, а также локальных предприятий, предоставляя эффективную поддержку в снабжении.',
       stats: {
         years: 'Лет опыта',
         clients: 'Довольных клиентов',
@@ -502,21 +535,54 @@ const ru = {
     },
     
     mission: {
-      title: 'Наша миссия и ценности',
-      description: 'Наша миссия - стать самым надежным партнером для промышленных предприятий, поставляя высококачественное оборудование и комплектующие, обеспечивающие бесперебойную работу производственных мощностей.<br><br>Мы стремимся устанавливать долгосрочные отношения с нашими клиентами на основе взаимного доверия, своевременной доставки и профессионального обслуживания.',
+      title: 'Наши ценности и цель',
+      description: 'Наша цель: Обеспечивать предприятия Казахстана необходимыми комплектующими и оборудованием — быстро, точно, без посредников.',
       values: {
         quality: {
-          title: 'Качество',
-          text: 'Мы предлагаем только сертифицированную продукцию от проверенных производителей с полной гарантийной поддержкой.'
+          title: 'Безупречное качество услуг',
+          text: 'Мы поддерживаем высочайшие стандарты во всех наших услугах и операциях.'
         },
         reliability: {
-          title: 'Надёжность',
-          text: 'Своевременная доставка и профессиональное обслуживание - основа нашего подхода к бизнесу.'
+          title: 'Оперативность в подборе и поставках',
+          text: 'Мы обеспечиваем быстрое реагирование и сроки доставки для всех потребностей в оборудовании.'
         },
         innovation: {
-          title: 'Инновации',
-          text: 'Мы постоянно следим за тенденциями рынка, чтобы предлагать самые передовые решения.'
+          title: 'Прямые отношения с OEM-производителями',
+          text: 'Мы поддерживаем прямые связи с оригинальными производителями оборудования.'
+        },
+        marketKnowledge: {
+          title: 'Глубокая осведомлённость о рынке',
+          text: 'Мы обладаем обширными знаниями рынка промышленного оборудования.'
+        },
+        feedback: {
+          title: 'Постоянная обратная связь с клиентами',
+          text: 'Мы поддерживаем постоянную коммуникацию с нашими клиентами для улучшения нашего сервиса.'
         }
+      }
+    },
+    
+    "services": {
+      "title": "Услуги",
+      "description": "Мы предоставляем комплекс услуг, включающих:",
+      "items": "|Поставку оригинального оборудования и комплектующих под заказ|Технический подбор продукции на основе спецификаций и условий эксплуатации|Поиск заводов-изготовителей и работа по OEM-кодам|Подбор аналогов при снятии с производства|Логистику и таможенное сопровождение \"под ключ\"|Поддержку в участии в тендерах и подготовке документации"
+    },
+    
+    industries: {
+      title: 'Отрасли',
+      description: 'Наша продукция поставляется на объекты и предприятия в следующих отраслях:',
+      items: "|Нефтегазовая промышленность|Энергетика|Химическая промышленность|Горно-металлургический комплекс|Гражданское и промышленное строительство"
+    },
+    
+    partners: {
+      title: 'Партнёры',
+      description: 'Мы работаем напрямую с производителями из Европы, Азии, США, Австралии и других стран, предоставляя клиентам оригинальную продукцию и официальные сертификаты.',
+      clients: {
+        title: 'Среди наших клиентов:',
+        items: "|Тенгизшевройл (TCO)|Карачаганак Петролиум Оперейтинг (KPO)|Норт Каспиан Оперейтинг Компани (NCOC)|Строительные и промышленные компании по всей РК"
+      },
+      suppliers: {
+        title: 'Наши поставщики — лидеры отрасли:',
+        text: 'John Crane, Loctite, Siemens, Honeywell, Hempel, Tyco, Pall и другие.'
       }
     },
     
@@ -685,7 +751,7 @@ const ru = {
       },
       address: {
         title: 'Адрес',
-        value: 'г. Астана, район Есиль, ул. Кунаева 33, офис 313',
+        value: 'г.Астана, ул. Сыганак 60/2',
         getDirections: 'Проложить маршрут'
       },
       hours: {
@@ -725,7 +791,7 @@ const ru = {
     
     officeLocation: {
       title: 'Наш главный офис',
-      address: 'г. Астана, район Есиль, ул. Кунаева 33, офис 313',
+      address: 'г.Астана, ул. Сыганак 60/2',
       directions: 'Расположен в центральном деловом районе, рядом с Центральным вокзалом.',
       hoursTitle: 'Рабочие часы',
       hours: 'Понедельник - Пятница: 9:00 - 18:00'
